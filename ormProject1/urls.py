@@ -20,5 +20,6 @@ from myApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.displayView)
+    path('', views.displayView),
+    path('aggregate/', views.agregate_view)
 ]
