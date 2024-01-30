@@ -12,7 +12,9 @@ def displayView(request):
     # qs1 = Employee.objects.filter(esal__lt = 60000)
     # qs2 = Employee.objects.filter(ename__endswith = 'R')
     # employees = qs1.union(qs2)
-    employees = Employee.objects.all().order_by(Lower('ename'))
+    # employees = Employee.objects.all()
+    # employees = Employee.objects.get_emp_sal_range(40000, 60000)
+    # employees = Employee.objects.get_emp_sorted_by('ename')
     dict = {'employees' : employees}
 
     return render(request, 'myApp/index.html', dict)
